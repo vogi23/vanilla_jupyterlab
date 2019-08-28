@@ -79,5 +79,5 @@
  docker build -t %PROJECT_DIRECTORY_NAME% -f config/Dockerfile .
  
  :: Run
- docker run -ti -v %cd%:/usr/local/bin/host_dir -p 8888:8888 --name %PROJECT_DIRECTORY_NAME% %PROJECT_DIRECTORY_NAME%
+ docker run -ti -v %cd%:/usr/local/bin/host_dir -p 8888:8888 --name %PROJECT_DIRECTORY_NAME%_%RANDOM% %PROJECT_DIRECTORY_NAME%
  pause
