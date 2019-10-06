@@ -4,8 +4,12 @@ LABEL maintainer="Christian von Gunten <chrigu@vgbau.ch>"
 
 ENV MAIN_PATH=/project
 
-RUN pip install -r ./requirements.txt
+COPY ./requirements.txt /tmp/requirements.txt
+
+RUN pip install -r /tmp/requirements.txt
 
 EXPOSE 8888
+
+WORKDIR $MAIN_PATH
 
 ENTRYPOINT ["/bin/bash", "-c", "jupyter lab"]

@@ -1,4 +1,1 @@
-pandas
-matplotlib
-sklearn
-tensorflow
+numpy==1.17
